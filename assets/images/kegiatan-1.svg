@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="400" viewBox="0 0 600 400" role="img" aria-labelledby="t1 d1">
+  <title id="t1">Foto Kegiatan 1 — Pemberangkatan &amp; Penerjunan</title>
+  <desc id="d1">Placeholder gradasi hijau dengan ikon bendera dan pin lokasi</desc>
+  <defs>
+    <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1B4332"/>
+      <stop offset="100%" stop-color="#409173"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" rx="0" fill="url(#g1)"/>
+  <!-- icon group centered at 300,160 -->
+  <g stroke="#fff" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <!-- flag pole -->
+    <line x1="280" y1="110" x2="280" y2="210" stroke-width="4" opacity="0.95"/>
+    <!-- flag -->
+    <path d="M280 115 H360 L345 135 L360 155 H280 Z" fill="#D4A373" stroke="#D4A373" stroke-width="2"/>
+    <!-- pin -->
+    <path d="M300 185 c0-18 15-32 0-48 -15 16 0 30 0 48 z" fill="none" stroke="#fff" stroke-width="3.5"/>
+    <circle cx="300" cy="168" r="7" fill="#fff" stroke="none"/>
+    <!-- ground line -->
+    <line x1="220" y1="210" x2="380" y2="210" stroke-width="2.5" opacity="0.35"/>
+  </g>
+  <text x="300" y="285" text-anchor="middle" font-family="Poppins, Inter, sans-serif" font-size="22" font-weight="700" fill="#fff">Foto Kegiatan 1</text>
+  <text x="300" y="310" text-anchor="middle" font-family="Inter, sans-serif" font-size="13" fill="rgba(255,255,255,0.82)">Pemberangkatan &amp; Penerjunan Tim</text>
+</svg>

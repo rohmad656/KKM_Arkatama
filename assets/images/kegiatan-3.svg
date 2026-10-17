@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="400" viewBox="0 0 600 400" role="img" aria-labelledby="t3 d3">
+  <title id="t3">Foto Kegiatan 3 — Gotong Royong &amp; Kebersamaan</title>
+  <desc id="d3">Placeholder gradasi hijau dengan ikon gotong royong dan jabat tangan</desc>
+  <defs>
+    <linearGradient id="g3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1B4332"/>
+      <stop offset="100%" stop-color="#74C69D"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" fill="url(#g3)"/>
+  <g stroke="#fff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- clasped hands simplified -->
+    <path d="M220 175 L260 155 L285 175 L260 195 Z" fill="rgba(255,255,255,0.18)" stroke-width="3"/>
+    <path d="M380 175 L340 155 L315 175 L340 195 Z" fill="rgba(255,255,255,0.18)" stroke-width="3"/>
+    <path d="M260 155 Q300 135 340 155" stroke-width="3.2"/>
+    <path d="M260 195 Q300 215 340 195" stroke-width="3.2"/>
+    <!-- heart above -->
+    <path d="M300 132 C295 125 282 125 282 135 C282 145 300 158 300 158 C300 158 318 145 318 135 C318 125 305 125 300 132 Z" fill="#fff" stroke="none" opacity="0.92"/>
+  </g>
+  <text x="300" y="285" text-anchor="middle" font-family="Poppins, Inter, sans-serif" font-size="22" font-weight="700" fill="#fff">Foto Kegiatan 3</text>
+  <text x="300" y="310" text-anchor="middle" font-family="Inter, sans-serif" font-size="13" fill="rgba(255,255,255,0.82)">Gotong Royong &amp; Kebersamaan</text>
+</svg>
