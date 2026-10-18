@@ -162,13 +162,14 @@ button{font:inherit}
 }
 .hero-content{text-align:left;position:relative;z-index:1;max-width:560px;width:100%}
 .hero-badge{
-  display:inline-block;margin:0 0 24px;
+  display:inline-flex;align-items:center;gap:0;margin:0 0 24px;
   padding:8px 20px;border-radius:24px;
   background:rgba(255,255,255,.15);color:#fff;
   backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
   border:1px solid rgba(255,255,255,.2);
   font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;
 }
+.hero-badge svg{width:14px;height:14px;stroke:#D4A373;display:inline-block;vertical-align:middle;margin-right:6px;flex-shrink:0}
 .hero-title{
   margin:0 0 16px;
   font-size:3.25rem;line-height:1.15;color:#fff;font-family:'Poppins',sans-serif;font-weight:700;letter-spacing:-.02em;
@@ -224,7 +225,8 @@ button{font:inherit}
 }
 .floating-card strong{display:block;color:#1B4332;font-size:.9rem}
 .floating-card span{color:#7A8A83;font-size:.78rem}
-.fc-icon{width:36px;height:36px;border-radius:10px;background:#E7F2EC;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.fc-icon{width:32px;height:32px;border-radius:8px;background:#E7F2EC;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.fc-icon svg{width:16px;height:16px}
 .floating-card-top{top:12%;right:-8px;animation-delay:0s}
 .floating-card-bottom{bottom:10%;left:-8px;animation-delay:2s}
 @keyframes floatCard{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
@@ -243,7 +245,8 @@ img{max-width:100%;height:auto}
 .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: stretch; }
 
 .quote-card { background: #fff; border-radius: 16px; padding: 32px; box-shadow: 0 8px 24px rgba(27,67,50,.08); display: flex; flex-direction: column; height: 100%; }
-.quote-icon { font-size: 3rem; color: #74C69D; line-height: 1; font-family: Georgia, serif; margin-bottom: 16px; }
+.quote-icon { font-size: 0; width: 24px; height: 24px; margin-bottom: 16px; }
+.quote-icon svg { width: 24px; height: 24px; stroke: #74C69D; opacity: .6; }
 .quote-text { font-style: italic; color: #3E4C46; line-height: 1.8; font-size: 1rem; margin-bottom: 24px; }
 .quote-divider { border: none; border-top: 1px solid #E3EDE8; margin-bottom: 16px; }
 .signature { margin-top: auto; }
@@ -253,8 +256,8 @@ img{max-width:100%;height:auto}
 .values-col { display: flex; flex-direction: column; gap: 20px; justify-content: space-between; }
 .value-card { flex: 1; display: flex; align-items: center; gap: 18px; background: #fff; border-radius: 14px; padding: 20px 24px; box-shadow: 0 6px 18px rgba(27,67,50,.06); transition: transform .3s ease, box-shadow .3s ease; }
 .value-card:hover { transform: translateY(-4px); box-shadow: 0 12px 28px rgba(27,67,50,.12); }
-.value-icon { flex-shrink: 0; width: 44px; height: 44px; border-radius: 12px; background: #E7F2EC; display: flex; align-items: center; justify-content: center; }
-.value-icon svg { width: 22px; height: 22px; stroke: #2D6A4F; display: block; margin: auto; }
+.value-icon { flex-shrink: 0; width: 40px; height: 40px; border-radius: 10px; background: #E7F2EC; display: flex; align-items: center; justify-content: center; }
+.value-icon svg { width: 18px; height: 18px; stroke: #2D6A4F; display: block; margin: auto; }
 .value-body h3 { font-family: 'Poppins', sans-serif; font-size: 1rem; color: #1B4332; margin-bottom: 4px; }
 .value-body p { color: #5B6B63; font-size: .95rem; line-height: 1.6; }
 
@@ -285,10 +288,10 @@ img{max-width:100%;height:auto}
 }
 .program-card:hover{transform:translateY(-4px);box-shadow:0 12px 28px rgba(27,67,50,.12)}
 .program-icon{
-  width:48px;height:48px;border-radius:12px;background:#E7F2EC;
+  width:40px;height:40px;border-radius:10px;background:#E7F2EC;
   display:flex;align-items:center;justify-content:center;margin-bottom:16px
 }
-.program-icon svg{width:24px;height:24px;stroke:#2D6A4F}
+.program-icon svg{width:18px;height:18px;stroke:#2D6A4F}
 .program-card h3{font-family:'Poppins',sans-serif;font-size:1rem;font-weight:700;color:#1B4332;margin-bottom:8px}
 .program-card p{color:#5B6B63;font-size:.95rem;line-height:1.6}
 
@@ -359,16 +362,16 @@ img{max-width:100%;height:auto}
   box-shadow: 0 8px 24px rgba(27,67,50,.12);
 }
 .kontak-icon {
-  width: 48px;
-  height: 48px;
-  border-radius: 12px;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
   background: #E7F2EC;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.25rem;
   flex-shrink: 0;
 }
+.kontak-icon svg { width: 18px; height: 18px; }
 .kontak-body h3 {
   font-family: 'Poppins', sans-serif;
   font-size: 1rem;
@@ -396,11 +399,15 @@ img{max-width:100%;height:auto}
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  gap: 8px;
   padding: 16px 40px;
   font-size: 1.1rem;
   font-weight: 600;
   width: 100%;
 }
+.btn svg{flex-shrink:0}
+.btn-large svg{width:18px;height:18px}
+.btn-primary svg{width:16px;height:16px}
 @media (max-width: 768px) {
   .kontak-grid {
     grid-template-columns: 1fr;
@@ -515,11 +522,11 @@ img{max-width:100%;height:auto}
 .footer-brand p{font-size:13.5px;line-height:1.7;color:rgba(255,255,255,.62);max-width:320px}
 .footer-socials{display:flex;gap:12px;margin:20px 0}
 .social-icon{
-  width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+  width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;
   background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.12);color:#fff;text-decoration:none;transition:background .3s ease, transform .3s ease;
 }
 .social-icon:hover{background:rgba(255,255,255,.20);transform:scale(1.1)}
-.social-icon svg{width:18px;height:18px}
+.social-icon svg{width:16px;height:16px}
 .social-icon svg[fill="currentColor"]{fill:currentColor}
 .social-icon svg[stroke="currentColor"]{stroke:currentColor}
 .footer-col h5{color:#fff;font-size:13px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:16px}
@@ -529,7 +536,9 @@ img{max-width:100%;height:auto}
 .footer-contact svg{width:16px;height:16px;color:var(--accent);flex-shrink:0}
 .footer-bottom{border-top:1px solid rgba(255,255,255,.08);padding:18px 0}
 .footer-bottom-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px;color:rgba(255,255,255,.48)}
-.footer-bottom-inner .heart{width:14px;height:14px;color:#E85D4E;fill:#E85D4E;display:inline-block;vertical-align:middle}
+.footer-bottom-inner .heart{width:14px;height:14px;display:inline-block;vertical-align:middle;margin:0 4px}
+.copyright-heart{display:inline-block;width:14px;height:14px;vertical-align:middle;margin:0 4px}
+.copyright-heart svg{width:14px;height:14px;fill:#E76F51}
 .footer-made{color:rgba(255,255,255,.32)}
 
 /* REVEAL */
@@ -539,6 +548,12 @@ img{max-width:100%;height:auto}
 .reveal.d2{transition-delay:.16s}
 .reveal.d3{transition-delay:.24s}
 .reveal.d4{transition-delay:.32s}
+@media (max-width: 768px){
+  .value-icon,.kontak-icon{width:36px;height:36px}
+  .value-icon svg,.kontak-icon svg{width:16px;height:16px}
+  .social-icon{width:34px;height:34px}
+  .social-icon svg{width:15px;height:15px}
+}
 @media (prefers-reduced-motion:reduce){
   .reveal{opacity:1;transform:none;transition:none}
   .hero-scroll{animation:none}
