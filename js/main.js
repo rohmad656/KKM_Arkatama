@@ -13,28 +13,48 @@
   window.addEventListener('scroll', onScroll, {passive:true});
   onScroll();
 
-  // Hamburger
+  // Navbar auto-hide when footer visible
+  const footerEl = document.querySelector('.footer');
+  function onFooterScroll(){
+    if(!footerEl) return;
+    const top = footerEl.getBoundingClientRect().top;
+    if(top < window.innerHeight){
+      navbar.classList.add('navbar-hidden');
+      navbar.classList.remove('navbar-visible');
+    } else {
+      navbar.classList.remove('navbar-hidden');
+      navbar.classList.add('navbar-visible');
+    }
+  }
+  window.addEventListener('scroll', onFooterScroll, {passive:true});
+  onFooterScroll();
+
+  function closeMenu(){
+    navLinks.classList.remove('open');
+    hamburger.classList.remove('is-active');
+    hamburger.setAttribute('aria-expanded','false');
+    hamburger.setAttribute('aria-label','Buka menu');
+    document.body.style.overflow='';
+  }
+  // Single toggle hamburger ↔ X
   hamburger.addEventListener('click', ()=>{
     const open = navLinks.classList.toggle('open');
-    hamburger.classList.toggle('open', open);
+    hamburger.classList.toggle('is-active', open);
     hamburger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    hamburger.setAttribute('aria-label', open ? 'Tutup menu' : 'Buka menu');
     document.body.style.overflow = open ? 'hidden' : '';
   });
-  // Close on link click / outside / esc
+  // Close on link click
   links.forEach(a=>{
-    a.addEventListener('click', ()=>{
-      navLinks.classList.remove('open');
-      hamburger.classList.remove('open');
-      document.body.style.overflow='';
-    });
+    a.addEventListener('click', closeMenu);
   });
   document.addEventListener('click', (e)=>{
     if(!navLinks.classList.contains('open')) return;
     if(navLinks.contains(e.target) || hamburger.contains(e.target)) return;
-    navLinks.classList.remove('open'); hamburger.classList.remove('open'); document.body.style.overflow='';
+    closeMenu();
   });
   document.addEventListener('keydown', (e)=>{
-    if(e.key==='Escape'){ navLinks.classList.remove('open'); hamburger.classList.remove('open'); document.body.style.overflow=''; }
+    if(e.key==='Escape') closeMenu();
   });
 
   // Active nav by scroll (IntersectionObserver)
@@ -52,7 +72,7 @@
         if(navMap[id]) navMap[id].classList.add('active');
       }
     });
-  }, { rootMargin:'-30% 0px -60% 0px', threshold:0 });
+  }, { rootMargin:'-20% 0px -55% 0px', threshold:0 });
   sections.forEach(s=>ioNav.observe(s));
 
   // Scroll reveal
